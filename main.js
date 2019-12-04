@@ -2,7 +2,9 @@ window.onload = function (){
 var style = document.querySelectorAll('.controls input') //input label for base color
 
 function update(){
-    console.log(this.value)
+    const suffix = this.dataset.sizing || ""
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+   
 
 }
 
